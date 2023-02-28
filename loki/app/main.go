@@ -12,6 +12,7 @@ import (
 func main() {
 	http.Handle("/ping", WithLogging(pingHandler()))
 	http.Handle("/http", WithLogging(httpHandler()))
+	
 
 	addr := "0.0.0.0:8080"
 	logrus.WithField("addr", addr).Info("starting server")
